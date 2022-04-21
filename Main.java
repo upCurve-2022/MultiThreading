@@ -8,6 +8,7 @@ public class Main {
     public static ConcurrentLinkedQueue<Integer> orderNumber = new ConcurrentLinkedQueue<>();
     public static void main (String[] args){
 
+        //adding pizzas to the menu
         menu.add("Paneer-Onion");
         menu.add("Pepperoni");
         menu.add("Margherita");
@@ -15,6 +16,7 @@ public class Main {
         menu.add("Farm House");
         menu.add("Mexican Green Wave");
         menu.add("Veg Extravaganza");
+        //displaying the menu
         System.out.println("\n************************************** WELCOME TO TASTY PIZZA'S ****************************************");
         System.out.println("\nTODAY'S MENU : \n");
         System.out.println("Pizza code \t       Pizza Name");
@@ -23,6 +25,8 @@ public class Main {
         }
         System.out.println();
 
+        //creating thread objects  and naming them
+        
         CounterClass counter1 = new CounterClass();
         Thread counterTh1 = new Thread(counter1);
         counterTh1.setName("Counter - 1 ");
@@ -47,6 +51,8 @@ public class Main {
         Thread chefTh3 = new Thread( chef3 );
         chefTh3.setName("Merle");
 
+        //starting the initialized threads
+        
         counterTh1.start();
         counterTh2.start();
         counterTh3.start();
