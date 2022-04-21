@@ -19,6 +19,7 @@ public class CounterClass implements Runnable{
                 System.out.println(Thread.currentThread().getName()+ " : order for " + Main.menu.get(orderNum-1) +" is confirmed");
             }
             try{
+                
                 Thread.sleep(1000);
 
             }
